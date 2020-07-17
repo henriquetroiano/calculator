@@ -22,6 +22,18 @@ operationButtons.forEach((btn) => {
     })
 })
 
+actionButtons.forEach((btn) => {
+
+    btn.addEventListener('click', function() {
+        if(btn.id="clear") {
+            inputValue[0].value = 0;
+        }
+        if(btn.id="del") {
+            inputValue[0].value.filter(inputValue[0].value.length);
+        }
+    })
+})
+
 
 
 
