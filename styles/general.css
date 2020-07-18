@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* reset css */
+
+* {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* setting default rem value */
+
+html {
+    font-size: 10px;
+}
+
+/* setting calculator styles now */
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+main > div.container {
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+main > div.container > h1 {
+    color: white;
+    font-size: 2.4rem;
+}
+
+main > div.container > input {
+    border: none;
+    border-radius: 3px;
+    height: 3rem;
+    margin: 1rem 0;
+    padding: 0 1rem;
+}
+
+main > div.container > div.buttons {
+    display: grid;
+    grid-template-areas: 
+    "number operations"
+    "number operations"
+    "equal equal";
+    grid-template-columns: 75% 25%;
+    gap: 0;
+}
+
+main > div.container > div.buttons > section#numbers { 
+    grid-area: number;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main > div.container > div.buttons > section#numbers > button { 
+    width: 33.333333%;
+    height: 50px;
+    color: white;
+    background-color: forestgreen;
+    font-weight: 500;
+    font-size: 2rem;
+    transition: 0.2s;
+} 
+
+
+main > div.container > div.buttons > section#operations { 
+    grid-area: operations;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+main > div.container > div.buttons > section#operations > button { 
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: forestgreen;
+    font-weight: 500;
+    font-size: 2rem;
+    transition: 0.2s;
+}
+
+
+
+main > div.container > div.buttons > section#numbers > button:hover,
+main > div.container > div.buttons > section#operations > button:hover,
+main > div.container > div.buttons > section#result > button:hover { 
+    background-color: white;
+    color: black;
+}
+
+main > div.container > div.buttons > section#numbers > button:active,
+main > div.container > div.buttons > section#operations > button:active, 
+main > div.container > div.buttons > section#result > button:active { 
+    background-color: rgba(0, 0, 0, 0.801);
+    color: red;
+    transform: scale(1.1);
+}
+
+
+main > div.container > div.buttons > section#result { 
+    grid-area: equal;
+    width: 100%;
+} 
+
+main > div.container > div.buttons > section#result > button { 
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: forestgreen;
+    font-weight: 500;
+    font-size: 2rem;
+    transition: 0.2s;
+} 
+
+
+
